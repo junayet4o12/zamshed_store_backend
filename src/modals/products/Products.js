@@ -17,6 +17,10 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
+    measurement: {
+        type: String,
+        required: true
+    },
     addedTime: {
         type: Number,
         required: true
