@@ -8,12 +8,15 @@ applyMiddleWare(app)
 const allProducts = require('./src/routes/allProducts/index');
 const addProducts = require('./src/routes/addProducts/index')
 const jwt = require('./src/routes/jwt/index')
-const Products = require('./src/modals/products/products');
+const updateProducts = require('./src/routes/updateProducts/index')
+const singleProduct = require('./src/routes/singleProduct/index')
 
 
 app.use(jwt)
 app.use(allProducts)
 app.use(addProducts)
+app.use(updateProducts)
+app.use(singleProduct)
 
 app.all("*", (req, res, next) => {
     const error = new Error(`The requested Url is invalid : [${req?.url}]`)
