@@ -13,8 +13,11 @@ const usersSchema = new Schema({
     profilePhoto: {
         type: String,
     },
-    ContactNumber: {
+    contactNumber: {
         type: String,
+    },
+    isAdmin: {
+        type: Boolean,
     },
     addedTime: {
         type: Number,

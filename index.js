@@ -17,6 +17,9 @@ const addUsers = require('./src/routes/addUsers/index')
 const allUsers = require('./src/routes/allUsers/index')
 const singleUser = require('./src/routes/singleUser/index')
 const updateSingleUsers = require('./src/routes/updateSingleUser/index')
+const admin = require('./src/routes/isAdmin/index')
+const storeOrderedProduct = require('./src/routes/storeOrderedProduct/index')
+const getOrderedProduct = require('./src/routes/getOrderedProduct/index')
 
 
 app.use(jwt)
@@ -31,6 +34,9 @@ app.use(addUsers)
 app.use(allUsers)
 app.use(singleUser)
 app.use(updateSingleUsers)
+app.use(admin)
+app.use(storeOrderedProduct)
+app.use(getOrderedProduct)
 
 app.all("*", (req, res, next) => {
     const error = new Error(`The requested Url is invalid : [${req?.url}]`)
