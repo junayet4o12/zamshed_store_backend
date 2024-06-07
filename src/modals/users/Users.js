@@ -10,10 +10,16 @@ const usersSchema = new Schema({
         type: String,
         required: true
     },
+    profilePhoto: {
+        type: String,
+    },
+    ContactNumber: {
+        type: String,
+    },
     addedTime: {
         type: Number,
         required: true
-    }
+    },
 })
 const Users = model('users', usersSchema);
-module.exports = Users;
+module.exports = Users;  

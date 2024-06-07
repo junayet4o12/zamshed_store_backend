@@ -15,6 +15,8 @@ const categoryWiseProducts = require('./src/routes/categoryWiseProductsCount/ind
 const cartProducts = require('./src/routes/getCartProducts/index')
 const addUsers = require('./src/routes/addUsers/index')
 const allUsers = require('./src/routes/allUsers/index')
+const singleUser = require('./src/routes/singleUser/index')
+const updateSingleUsers = require('./src/routes/updateSingleUser/index')
 
 
 app.use(jwt)
@@ -27,6 +29,8 @@ app.use(categoryWiseProducts)
 app.use(cartProducts)
 app.use(addUsers)
 app.use(allUsers)
+app.use(singleUser)
+app.use(updateSingleUsers)
 
 app.all("*", (req, res, next) => {
     const error = new Error(`The requested Url is invalid : [${req?.url}]`)
