@@ -27,4 +27,4 @@ const orderedProductSchema = new Schema({
     }
 })
 const OrderedProduct = model('orderedProduct', orderedProductSchema);
-module.exports = OrderedProduct; 
+module.exports = OrderedProduct;  
