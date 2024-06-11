@@ -23,7 +23,10 @@ const getOrderedProduct = require('./src/routes/getOrderedProduct/index')
 const getOrderedProductByEmail = require('./src/routes/getOrdererProductByEmail/index')
 const clientOrdersCount = require('./src/routes/clientOrdersCount/index')
 const onProcessingOrders = require('./src/routes/onProcessingOrders/index')
+const completedOrders = require('./src/routes/completedOrders/index')
 const singleOrder = require('./src/routes/getSingleOrder/index')
+const makeOrderCompleted = require('./src/routes/makeOrderCompleted/index')
+const makeOrderIncomplete = require('./src/routes/makeOrderIncomplete/index')
 
 
 app.use(jwt)
@@ -44,7 +47,10 @@ app.use(getOrderedProduct)
 app.use(getOrderedProductByEmail)
 app.use(clientOrdersCount)
 app.use(onProcessingOrders)
+app.use(completedOrders)
 app.use(singleOrder)
+app.use(makeOrderCompleted)
+app.use(makeOrderIncomplete)
 
 app.all("*", (req, res, next) => {
     const error = new Error(`The requested Url is invalid : [${req?.url}]`)
