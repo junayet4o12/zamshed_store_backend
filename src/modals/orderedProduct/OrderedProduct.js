@@ -17,6 +17,13 @@ const orderedProductSchema = new Schema({
         type: String,
         required: true
     },
+    location: {
+        type: String,
+        required: true
+    },
+    writtenLocation: {
+        type: String,
+    },
     stage: {
         type: String,
         required: true

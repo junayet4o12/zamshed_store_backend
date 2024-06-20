@@ -5,9 +5,9 @@ const port = process.env.PORT || 3000;
 require('dotenv').config()
 const applyMiddleWare = require('./src/middlewares/applyMiddlewares');
 applyMiddleWare(app)
+const jwt = require('./src/routes/jwt/index')
 const allProducts = require('./src/routes/allProducts/index');
 const addProducts = require('./src/routes/addProducts/index')
-const jwt = require('./src/routes/jwt/index')
 const updateProducts = require('./src/routes/updateProducts/index')
 const singleProduct = require('./src/routes/singleProduct/index')
 const deleteProducts = require('./src/routes/deleteProducts/index')
@@ -51,7 +51,6 @@ app.use(completedOrders)
 app.use(singleOrder)
 app.use(makeOrderCompleted)
 app.use(makeOrderIncomplete)
-
 app.all("*", (req, res, next) => {
     const error = new Error(`The requested Url is invalid : [${req?.url}]`)
     error.status = 404;
