@@ -5,4 +5,4 @@ const applyMiddleWare = (app) => {
     app.use(express.json())
 }
 
-module.exports = applyMiddleWare;
+module.exports = applyMiddleWare; 
