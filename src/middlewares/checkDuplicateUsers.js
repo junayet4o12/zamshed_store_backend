@@ -5,4 +5,4 @@ const checkDuplicateUser = async (user) => {
     const existingUser = await Users.findOne(query);
     return existingUser
 }
-module.exports= checkDuplicateUser
+module.exports= checkDuplicateUser 
