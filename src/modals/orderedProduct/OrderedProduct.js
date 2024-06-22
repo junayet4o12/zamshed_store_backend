@@ -2,11 +2,15 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 const orderedProductSchema = new Schema({
     productData: {
-        type: Schema.Types.Mixed, 
+        type: Schema.Types.Mixed,
         required: true
     },
     totalPrice: {
         type: Number,
+        required: true
+    },
+    clientName: {
+        type: String,
         required: true
     },
     clientEmail: {
