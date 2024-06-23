@@ -54,7 +54,7 @@ app.use(makeOrderCompleted)
 app.use(makeOrderIncomplete)
 app.use(deleteOrders)
 app.all("*", (req, res, next) => {
-    const error = new Error(`The requested Url is invalid : [${req?.url}]`)
+    const error = new Error(`The requested Url is invalid : [${req.url}]`)
     error.status = 404;
     next(error)
 })

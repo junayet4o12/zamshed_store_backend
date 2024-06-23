@@ -7,7 +7,7 @@ router.post('/jwt', async (req, res) => {
     // const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
     //     expiresIn: '1h'
     // })
-    const token = jwt.sign(user, process?.env?.ACCESS_TOKEN_SECRET, {
+    const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
         expiresIn: '1h'
     })
     res.send({ token })

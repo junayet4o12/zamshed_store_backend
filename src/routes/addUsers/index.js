@@ -4,7 +4,7 @@ const checkDuplicateUser = require('../../middlewares/checkDuplicateUsers');
 var router = express.Router();
 
 router.post('/addUsers', async (req, res) => {
-    const user = req?.body;
+    const user = req.body;
     const existingUser = await checkDuplicateUser(user)
     if (existingUser) {
         return res.send({ message: ' user already exists' })

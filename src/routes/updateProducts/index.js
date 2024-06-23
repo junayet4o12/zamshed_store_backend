@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.put('/updateProducts/:id',verifyToken,  async (req, res) => {
     const id = req.params.id
-    const productData = req?.body;
+    const productData = req.body;
     const result = await Products.findByIdAndUpdate(id, productData, { new: true })
     res.send(result)
 }) 
