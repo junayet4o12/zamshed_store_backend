@@ -8,6 +8,7 @@ router.post('/addUsers', async (req, res) => {
     const existingUser = await checkDuplicateUser(user)
     if (existingUser) {
         return res.send({ message: ' user already exists' })
+        
     }
     const result = await Users.create(user)
     res.send(result)
