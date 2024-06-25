@@ -1,5 +1,5 @@
 var express = require('express');
-const Products = require('../../modals/products/products');
+const Products = require('../../modals/products/Products');
 var router = express.Router();
 router.get('/categoryWiseProductsCount/:category',  async (req, res) => {
     const category = req.params.category;

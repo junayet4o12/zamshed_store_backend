@@ -1,5 +1,5 @@
 var express = require('express');
-const Products = require('../../modals/products/products');
+const Products = require('../../modals/products/Products');
 const mongoose = require('mongoose');
 var router = express.Router();
 router.post('/cartProducts', async (req, res) => {

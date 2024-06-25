@@ -1,5 +1,5 @@
 var express = require('express');
-const Products = require('../../modals/products/products');
+const Products = require('../../modals/products/Products');
 const verifyToken = require('../../middlewares/verifyToken');
 var router = express.Router();
 router.get('/singleProduct/:id', verifyToken, async (req, res) => {
