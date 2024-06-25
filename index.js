@@ -6,7 +6,7 @@ require('dotenv').config()
 const applyMiddleWare = require('./src/middlewares/applyMiddlewares');
 applyMiddleWare(app)
 const jwt = require('./src/routes/jwt/index')
-// const allProducts = require('./src/routes/allProducts/index');
+const allProducts = require('./src/routes/allProducts/index');
 const addProducts = require('./src/routes/addProducts/index')
 // const updateProducts = require('./src/routes/updateProducts/index')
 // const singleProduct = require('./src/routes/singleProduct/index')
@@ -31,7 +31,7 @@ const addProducts = require('./src/routes/addProducts/index')
 
 
 app.use(jwt)
-// app.use(allProducts)
+app.use(allProducts)
 app.use(addProducts)
 // app.use(updateProducts)
 // app.use(singleProduct)
