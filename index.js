@@ -31,7 +31,8 @@ const makeOrderOnProcessing = require('./src/routes/makeOrderOnProcessing/index'
 const makeOrderCompleted = require('./src/routes/makeOrderCompleted/index')
 const makeOrderIncomplete = require('./src/routes/makeOrderIncomplete/index')
 const deleteOrders = require('./src/routes/deleteOrders/index')
-
+const homeContent = require('./src/routes/getHomeContent/index')
+const updateHomeContent = require('./src/routes/updateHomeContent/index')
 
 app.use(jwt)
 app.use(allProducts)
@@ -59,6 +60,8 @@ app.use(makeOrderOnProcessing)
 app.use(makeOrderCompleted)
 app.use(makeOrderIncomplete)
 app.use(deleteOrders)
+app.use(homeContent)
+app.use(updateHomeContent)
 app.all("*", (req, res, next) => {
     const error = new Error(`The requested Url is invalid : [${req.url}]`)
     error.status = 404;
