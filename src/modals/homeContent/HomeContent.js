@@ -47,4 +47,4 @@ const homeContentSchema = new Schema({
 
 })
 const HomeContent = model('homeContent', homeContentSchema);
-module.exports = HomeContent;
+module.exports = HomeContent; 
