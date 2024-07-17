@@ -6,9 +6,7 @@ var router = express.Router();
 router.put('/updateHomeContent/:id',verifyToken,  async (req, res) => {
     const id = req.params.id
     const homeContentData = req.body;
-    console.log(id,homeContentData);
     const result = await HomeContent.findByIdAndUpdate(id, homeContentData, { new: true })
-    console.log(result);
     res.send(result)
 }) 
 
