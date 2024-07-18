@@ -24,6 +24,9 @@ const productSchema = new Schema({
     addedTime: {
         type: Number,
         required: true
+    },
+    isHot: {
+        type: Boolean
     }
 })
 const Products = model('products', productSchema);
