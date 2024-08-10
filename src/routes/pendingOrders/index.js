@@ -4,8 +4,8 @@ const verifyToken = require('../../middlewares/verifyToken');
 var router = express.Router();
 
 router.get('/pendingOrders', verifyToken, async (req, res) => {
-    const precessingQuery = { stage: 'pending' }
-    const result = await OrderedProduct.find(precessingQuery)
+    const pendingQuery = { stage: 'pending' }
+    const result = await OrderedProduct.find(pendingQuery)
     res.send(result)
 })
 module.exports = router
