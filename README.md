@@ -1,11 +1,10 @@
-# Zamshed Store
+# Zamshed Store Backend
 **Zamshed Store** is a web application designed for efficient grocery shop management. Its primary goal is to streamline the ordering process and reduce offline workload, making it ideal for small-scale operations. Built with **React** and powered by **Vite**, the application uses **Firebase** for secure authentication, **Node.js** and **Express.js** for the backend, and **Redux** for effective state management. **MongoDB** handles database operations, while **Cloudinary** is integrated for seamless image hosting, allowing the proprietor to easily add products with images.
 
 ## 📑 Table of Contents
 - [✨ Features](#-features)
 - [🛠 Tech Stack](#-tech-stack)
 - [🚀 Installation](#-installation)
-- [⚙️ Usage](#%EF%B8%8F-usage)
 - [🔑 Environment Variables](#-environment-variables)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
