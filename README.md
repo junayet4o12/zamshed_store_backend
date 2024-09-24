@@ -109,7 +109,7 @@ The proprietor can maintain accurate shop and personal information:
    Navigate to [https://zamshed-store-backend.vercel.app](https://zamshed-store-backend.vercel.app) to see the app in action.
 
 ## 🔑 Environment Variables
-Make sure to configure the following environment variables in your `.env.` file:
+Make sure to configure the following environment variables in your `.env` file:
 
 - **Firebase Variables**:
   - DB_URI
