@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const connectDB = require('./src/DB/connectDB');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 require('dotenv').config()
 const applyMiddleWare = require('./src/middlewares/applyMiddlewares');
 applyMiddleWare(app)
@@ -38,7 +38,7 @@ const updateCategory = require('./src/routes/updateCategory/index')
 const deleteCategory = require('./src/routes/deleteCategory/index')
 const getCategories = require('./src/routes/getCategories/index')
 const getSingleCategory = require('./src/routes/getSingleCategory/index')
-
+const allProperty = require('./src/routes/allProperties/index')
 app.use(jwt)
 app.use(allProducts)
 app.use(addProducts)
@@ -72,6 +72,7 @@ app.use(updateCategory)
 app.use(deleteCategory)
 app.use(getCategories)
 app.use(getSingleCategory)
+app.use(allProperty)
 app.all("*", (req, res, next) => {
     const error = new Error(`The requested Url is invalid : [${req.url}]`)
     error.status = 404;
